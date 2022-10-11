@@ -10,9 +10,9 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
   
 def merge_sort(myList) -> None:
   if len(myList) > 1:
-        mid = len(myList) / 2
+        mid = len(myList) // 2
         left = myList[:mid]
-        right = myList[mid]
+        right = myList[mid:]
 
         # Recursive call on each half
         merge_sort(left)
@@ -23,7 +23,7 @@ def merge_sort(myList) -> None:
         j = 0
         
         # Iterator for the main list
-        k = 0
+        
         
         while i < len(left) and j < len(right):
             if left[i] <= right[j]:
